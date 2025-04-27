@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梅少伟 - 个人简历</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">梅少伟</div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link active">关于我</a>
+                <a href="#skills" class="nav-link">技能</a>
+                <a href="#experience" class="nav-link">经历</a>
+                <a href="#projects" class="nav-link">项目</a>
+                <a href="#publications" class="nav-link">成果</a>
+                <a href="#honors" class="nav-link">荣誉</a>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="header" id="about">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="static/msw.jpg" alt="梅少伟">
+                </div>
+                <div class="profile-info">
+                    <h1>梅少伟</h1>
+                    <p class="subtitle">电子信息硕士 | 全栈开发工程师</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> msw010417@163.com</p>
+                <p><i class="fas fa-birthday-cake"></i> 2001年4月</p>
+            </div>
+        </header>
+
+        <main>
+            <!-- 技能展示部分 -->
+            <section class="skills" id="skills">
+                <h2><i class="fas fa-code"></i> 技能专长</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-laptop-code"></i> 编程语言</h3>
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <div class="skill-header">
+                                    <span>Python</span>
+                                    <div class="skill-level-text">精通</div>
+                                </div>
+                                <div class="skill-description">熟练使用Python进行数据处理、机器学习和Web开发</div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-header">
+                                    <span>JavaScript</span>
+                                    <div class="skill-level-text">熟练</div>
+                                </div>
+                                <div class="skill-description">熟悉前端开发，能够使用Vue.js等框架</div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-header">
+                                    <span>Java</span>
+                                    <div class="skill-level-text">熟练</div>
+                                </div>
+                                <div class="skill-description">掌握Java开发，熟悉Spring框架</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-cogs"></i> 框架技术</h3>
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <div class="skill-header">
+                                    <span>Flask</span>
+                                    <div class="skill-level-text">精通</div>
+                                </div>
+                                <div class="skill-description">熟练使用Flask进行Web应用开发</div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-header">
+                                    <span>Vue.js</span>
+                                    <div class="skill-level-text">熟练</div>
+                                </div>
+                                <div class="skill-description">熟悉Vue.js框架，能够开发响应式前端应用</div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-header">
+                                    <span>Springboot</span>
+                                    <div class="skill-level-text">熟练</div>
+                                </div>
+                                <div class="skill-description">掌握Springboot框架，能够实现业务规则自动化</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-brain"></i> 其他技能</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">机器学习</span>
+                            <span class="skill-tag">深度学习</span>
+                            <span class="skill-tag">知识图谱</span>
+                            <span class="skill-tag">OCR技术</span>
+                            <span class="skill-tag">系统架构</span>
+                            <span class="skill-tag">项目管理</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 教育和工作经历部分 -->
+            <section class="experience-education" id="experience">
+                <div class="experience-education-container">
+                    <div class="education-section">
+                        <h2><i class="fas fa-graduation-cap"></i> 教育背景</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h3>上海第二工业大学</h3>
+                                    <p class="date">2024年－至今</p>
+                                    <p>电子信息 | 硕士</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h3>上海建桥学院</h3>
+                                    <p class="date">2019年-2023年</p>
+                                    <p>网络工程 | 本科</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-section">
+                        <h2><i class="fas fa-briefcase"></i> 工作经历</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h3>算法实习生</h3>
+                                    <p class="company">上海市大数据股份有限公司</p>
+                                    <p class="date">2025年3月-至今</p>
+                                    <ul>
+                                        <li>负责中医古籍Embedding进行向量相似度计算</li>
+                                        <li>负责开发图谱的展示页面</li>
+                                        <li>锦江集团智能体POC搭建</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h3>全栈开发</h3>
+                                    <p class="company">高知特信息技术（上海）有限公司</p>
+                                    <p class="date">2023年3月-2023年10月</p>
+                                    <ul>
+                                        <li>参与医药研究公司流程系统研发</li>
+                                        <li>国际医药公司架构设计</li>
+                                        <li>国内能源公司内部系统国际化操作</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 项目经历部分 -->
+            <section class="projects" id="projects">
+                <h2><i class="fas fa-project-diagram"></i> 项目经历</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>中医古籍知识图谱</h3>
+                        <p class="date">2025年3月-至今</p>
+                        <ul>
+                            <li>数据库搭建：运用embedding技术，完成数据处理后构建知识图谱</li>
+                            <li>项目重构：选取Flask+Vue.js优化技术架构</li>
+                        </ul>
+                    </div>
+                    <div class="project-card">
+                        <h3>锦江AI小助手POC开发</h3>
+                        <p class="date">2025年3月-2025年4月</p>
+                        <ul>
+                            <li>使用硅基流动中QwenAPI进行微调</li>
+                            <li>运用Flask搭建对话POC</li>
+                        </ul>
+                    </div>
+                    <div class="project-card">
+                        <h3>生产产线ERP系统</h3>
+                        <p class="date">2024年12月-至今</p>
+                        <ul>
+                            <li>需求分析与架构设计</li>
+                            <li>Flask+Vue.js全栈开发</li>
+                        </ul>
+                    </div>
+                    <div class="project-card">
+                        <h3>MA系统开发</h3>
+                        <p class="date">2023年6月-2023年10月</p>
+                        <ul>
+                            <li>设计架构与Drools规则引擎</li>
+                            <li>实现业务规则自动化</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 公开成果部分 -->
+            <section class="publications" id="publications">
+                <h2><i class="fas fa-book"></i> 公开成果</h2>
+                <div class="publication-list">
+                    <div class="publication-item">
+                        <p>ShaoweiMei, Ta-Wen Kuan, Xiaodong Yu, Handong Yu. YOLO Algorithm for Ripeness Detection in Greenhouse Cucumbers[C]//2024 International Conference on Orange Technology (icoT)</p>
+                    </div>
+                    <div class="publication-item">
+                        <p>Zhang S, Mei S. Research on Apriori Improvement Algorithm Based on MapReduce[C]//2024 7th International Conference on Advanced Algorithms and Control Engineering (ICAACE). IEEE, 2024:1-6.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 实践荣誉部分 -->
+            <section class="honors" id="honors">
+                <h2><i class="fas fa-trophy"></i> 实践荣誉</h2>
+                <div class="honors-grid">
+                    <div class="honor-card">
+                        <i class="fas fa-medal"></i>
+                        <p>华为杯第二十一届中国研究生数学建模三等奖</p>
+                    </div>
+                    <div class="honor-card">
+                        <i class="fas fa-medal"></i>
+                        <p>上海市优秀毕业生</p>
+                    </div>
+                    <div class="honor-card">
+                        <i class="fas fa-medal"></i>
+                        <p>全国大学生数学建模竞赛上海市三等奖</p>
+                    </div>
+                    <div class="honor-card">
+                        <i class="fas fa-medal"></i>
+                        <p>Mathorcup全国大学生数学建模竞赛本科组二等奖</p>
+                    </div>
+                    <div class="honor-card">
+                        <i class="fas fa-medal"></i>
+                        <p>蓝桥杯（软件组）上海市三等奖</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
