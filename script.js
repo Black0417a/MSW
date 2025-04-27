@@ -1,4 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Dark mode toggle functionality
+    const themeToggle = document.querySelector('.theme-toggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Check for saved theme preference or use system preference
+    const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
+    if (currentTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+
+    // Theme toggle click handler
+    themeToggle.addEventListener('click', () => {
+        if (document.body.classList.contains('dark-theme')) {
+            document.body.classList.remove('dark-theme');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.body.classList.add('dark-theme');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+
+    // Listen for system theme changes
+    prefersDarkScheme.addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            if (e.matches) {
+                document.body.classList.add('dark-theme');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                document.body.classList.remove('dark-theme');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        }
+    });
+
     // Initialize particles.js with enhanced interactivity settings
     particlesJS('particles-js', {
         particles: {
@@ -503,67 +540,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         scrollToTop();
     });
-
-    // 暗色主题切换 with improved animation
-    const themeToggle = document.querySelector('.theme-toggle');
-    themeToggle.addEventListener('click', () => {
-        // Create a ripple effect from the toggle button
-        const toggleRipple = () => {
-            const rect = themeToggle.getBoundingClientRect();
-            const ripple = document.createElement('div');
-            ripple.className = 'theme-ripple';
-            ripple.style.position = 'fixed';
-            ripple.style.top = '0';
-            ripple.style.left = '0';
-            ripple.style.width = '100%';
-            ripple.style.height = '100%';
-            ripple.style.backgroundColor = document.body.classList.contains('dark-theme') 
-                ? 'rgba(248, 250, 252, 0.03)' 
-                : 'rgba(15, 23, 42, 0.03)';
-            ripple.style.zIndex = '-1';
-            ripple.style.opacity = '0';
-            ripple.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-            document.body.appendChild(ripple);
-            
-            setTimeout(() => {
-                ripple.style.opacity = '1';
-                setTimeout(() => {
-                    ripple.style.opacity = '0';
-                    setTimeout(() => {
-                        ripple.remove();
-                    }, 600);
-                }, 300);
-            }, 10);
-        };
-        
-        toggleRipple();
-        
-        document.body.classList.toggle('dark-theme');
-        const icon = themeToggle.querySelector('i');
-        
-        // Update navbar style based on theme
-        if (document.body.classList.contains('dark-theme')) {
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-            navbar.style.background = 'rgba(15, 23, 42, 0.8)';
-        } else {
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
-            navbar.style.background = 'rgba(255, 255, 255, 0.8)';
-        }
-
-        // Save theme preference to localStorage
-        localStorage.setItem('darkTheme', document.body.classList.contains('dark-theme'));
-    });
-
-    // Check for saved theme preference
-    if (localStorage.getItem('darkTheme') === 'true') {
-        document.body.classList.add('dark-theme');
-        const icon = themeToggle.querySelector('i');
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-        navbar.style.background = 'rgba(15, 23, 42, 0.8)';
-    }
 
     // Add enhanced hover effects to navigation links
     navLinks.forEach(link => {
