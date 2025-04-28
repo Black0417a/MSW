@@ -354,6 +354,8 @@ h2::after {
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
     font-weight: 500;
+    display: flex;
+    align-items: center;
 }
 
 /* Project Grid Styles */
@@ -1127,13 +1129,6 @@ li {
     font-weight: 600;
 }
 
-.company, .date {
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
 .timeline-content ul {
     list-style: none;
     padding-left: 1.5rem;
@@ -1252,4 +1247,11 @@ li {
 /* hover 时显示二维码 */
 .weixin-link:hover .weixin-qr {
     display: block;
+}
+
+.company-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;   /* logo 与文字之间的间距 */
+    object-fit: contain; /* 保持等比，避免变形 */
 }
