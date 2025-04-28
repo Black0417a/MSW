@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         // Fetch project data
-        const response = await fetch('projects.json');
+        const response = await fetch('./json/projects.json');
         if (!response.ok) {
             throw new Error('Failed to fetch project data');
         }
