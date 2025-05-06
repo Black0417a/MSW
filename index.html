@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- 添加 Masonry 布局库 -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 </head>
 <body>
     <div id="particles-js"></div>
@@ -21,9 +24,11 @@
                 <a href="#about" class="nav-link active">关于我</a>
                 <a href="#skills" class="nav-link">技能</a>
                 <a href="#experience" class="nav-link">经历</a>
+                <a href="#github" class="nav-link">GitHub</a>
                 <a href="#projects" class="nav-link">项目</a>
                 <a href="#publications" class="nav-link">成果</a>
                 <a href="#honors" class="nav-link">荣誉</a>
+                <a href="#hobbies" class="nav-link">爱好</a>
             </div>
             <div class="theme-toggle">
                 <i class="fas fa-moon"></i>
@@ -192,6 +197,15 @@
                 </div>
             </section>
 
+            <section class="github-contributions" id="github">
+                <h2><i class="fab fa-github"></i> 我的 GitHub 足迹</h2>
+                <div class="github-container">
+                    <div class="contributions-calendar" id="contributions-calendar">
+                        <!-- 贡献图将通过JS动态加载 -->
+                    </div>
+                </div>
+            </section>
+            
             <!-- 项目经历部分 -->
             <section class="projects" id="projects">
                 <h2><i class="fas fa-project-diagram"></i> 项目经历</h2>
@@ -246,10 +260,34 @@
                     </div>
                 </div>
             </section>
+
+            <section class="hobbies" id="hobbies">
+                <h2><i class="fas fa-heart"></i> 兴趣爱好</h2>
+                <div class="hobbies-container">
+                    <div class="hobbies-intro">
+                        <p>生活不仅仅是代码和工作，我平时热爱：</p>
+                        <div class="hobby-tags">
+                            <span class="hobby-tag"><i class="fas fa-camera"></i> 摄影</span>
+                            <span class="hobby-tag"><i class="fas fa-plane-departure"></i> 旅行</span>
+                            <span class="hobby-tag"><i class="fas fa-headphones"></i> 音乐</span>
+                            <span class="hobby-tag"><i class="fas fa-book"></i> 阅读</span>
+                            <span class="hobby-tag"><i class="fas fa-hiking"></i> 徒步</span>
+                        </div>
+                    </div>
+                    <div class="photo-gallery" id="gallery">
+                        <!-- 照片将通过JS动态加载 -->
+                    </div>
+                </div>
+            </section>
+
         </main>
     </div>
 
+
     <script src="js/script.js"></script>
     <script src="js/projects.js"></script>
+    <!-- 添加照片画廊和GitHub贡献图的JS -->
+    <script src="js/hobbies.js"></script>
+    <script src="js/github-contributions.js"></script>
 </body>
 </html>
