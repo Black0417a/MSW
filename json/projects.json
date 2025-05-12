@@ -2,7 +2,7 @@
     {
         "id": "tcm-knowledge-graph",
         "title": "中医古籍知识图谱",
-        "period": "2025年3月-至今",
+        "period": "2025年3月-2025年5月",
         "company": "上海市大数据股份有限公司",
         "client": "国内某中医药大学研究院",
         "technologies": ["Python", "Flask", "Vue3", "Neo4j", "Embedding", "知识图谱"],
